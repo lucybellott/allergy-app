@@ -18,20 +18,28 @@ const [info, setInfo] = useState({})
     })
     }, [])
 
-    console.log(info.current.pollution.aqius)
-
+    console.log(info)
    
 
  
   return (
     <div className="App">
       <h1>Air app</h1>
+      <input placeholder='Search city'></input>
       <div className="city">
-        {info.city}
+        <p>Los Angeles</p>
+        {/* {info.city} */}
       </div>
       <div className="air-quality">
         <p>air quality index</p>
-        {info.current.pollution.aqius}
+        {/* {info.current.pollution.aqius} */}
+        <p>22</p>
+        <p>Status: Fair</p>
+      </div>
+      <div className="temp">
+        <p>Temp</p>
+        {/* {info.city} */}
+        <p>65F</p>
       </div>
     </div>
   );
