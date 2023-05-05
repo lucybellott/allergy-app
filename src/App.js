@@ -7,28 +7,32 @@ function App() {
   const apiCall = `http://api.airvisual.com/v2/city?city=Los%20Angeles&state=California&country=USA&key=${apiKey}`
   
   
-const [airIfo, setInfo] = useState({})
+const [info, setInfo] = useState({})
 
  
   useEffect(() => {
     fetch(`${apiCall}`)
     .then(resp => resp.json())
     .then(data => {
-        console.log(data)
+        setInfo(data.data)
     })
     }, [])
 
+    console.log(info.current.pollution.aqius)
 
-
-    // curl --request GET \
-    //  --url 'https://api.openaq.org/v2/cities?limit=100&page=1&offset=0&sort=asc&order_by=city' \
-    //  --header 'accept: application/json'
+   
 
  
   return (
     <div className="App">
       <h1>Air app</h1>
-      <div></div>
+      <div className="city">
+        {info.city}
+      </div>
+      <div className="air-quality">
+        <p>air quality index</p>
+        {info.current.pollution.aqius}
+      </div>
     </div>
   );
 }
