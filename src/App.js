@@ -24,7 +24,7 @@ const [info, setInfo] = useState({})
  
   return (
     <div className="App">
-      <h1>Air app</h1>
+      <h1>Air quality app</h1>
       <input placeholder='Search city'></input>
       <div className="city">
         <p>Los Angeles</p>
