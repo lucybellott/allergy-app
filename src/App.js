@@ -10,15 +10,15 @@ function App() {
 const [info, setInfo] = useState({})
 
  
-  useEffect(() => {
-    fetch(`${apiCall}`)
-    .then(resp => resp.json())
-    .then(data => {
-        setInfo(data.data)
-    })
-    }, [])
+  // useEffect(() => {
+  //   fetch(`${apiCall}`)
+  //   .then(resp => resp.json())
+  //   .then(data => {
+  //       setInfo(data.data)
+  //   })
+  //   }, [])
 
-    console.log(info)
+  //   console.log(info)
    
 
  
