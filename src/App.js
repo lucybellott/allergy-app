@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react'
 import './App.css';
+import {Pie, Doughnut} from 'react-chartjs-2';
 
 function App() {
   
