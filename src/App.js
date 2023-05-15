@@ -1,6 +1,7 @@
+import React from 'react';
 import {useEffect, useState} from 'react'
 import './App.css';
-import {Pie, Doughnut} from 'react-chartjs-2';
+//import {Doughnut} from 'react-chartjs-2';
 
 function App() {
   
@@ -11,15 +12,15 @@ function App() {
 const [info, setInfo] = useState({})
 
  
-  // useEffect(() => {
-  //   fetch(`${apiCall}`)
-  //   .then(resp => resp.json())
-  //   .then(data => {
-  //       setInfo(data.data)
-  //   })
-  //   }, [])
+  useEffect(() => {
+    fetch(`${apiCall}`)
+    .then(resp => resp.json())
+    .then(data => {
+        setInfo(data.data)
+    })
+    }, [])
 
-  //   console.log(info)
+    console.log(info)
 
    
 
