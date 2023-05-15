@@ -18,6 +18,7 @@ const [info, setInfo] = useState({})
     .then(data => {
         setInfo(data.data)
     })
+    .catch(error => console.log(error))
     }, [])
 
     console.log(info)
