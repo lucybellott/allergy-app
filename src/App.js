@@ -21,7 +21,7 @@ const [info, setInfo] = useState({})
     .catch(error => console.log(error))
     }, [])
 
-    console.log(info)
+    console.log(info.current)
 
    
 
@@ -32,7 +32,7 @@ const [info, setInfo] = useState({})
       <input className='search-bar' placeholder='Search city'></input>
       <div className="city">
         <p>Los Angeles</p>
-        {/* {info.city} */}
+        {info.city}
       </div>
       <div className="air-quality">
         <p>air quality index</p>
@@ -42,7 +42,7 @@ const [info, setInfo] = useState({})
       </div>
       <div className="temp">
         <p>Temp</p>
-        {/* {info.city} */}
+        {info.city}
         <p>65F</p>
       </div>
     </div>
