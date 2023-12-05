@@ -12,7 +12,16 @@ function App() {
 const [info, setInfo] = useState({})
 
  
-  
+  useEffect(() => {
+    fetch(`${apiCall}`)
+    .then(resp => resp.json())
+    .then(data => {
+        setInfo(data.data)
+    })
+    .catch(error => console.log(error))
+    }, [])
+
+    console.log(info.current)
 
    
 
