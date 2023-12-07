@@ -21,7 +21,7 @@ const [info, setInfo] = useState({})
     .catch(error => console.log(error))
     }, [])
 
-    // console.log(info.current)
+    console.log(info.current)
 
    
 
